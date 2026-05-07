@@ -1,0 +1,271 @@
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mE:/DevBrief AI[39m
+
+ [32m✓[39m src/tests/security/config.test.ts [2m ([22m[2m10 tests[22m[2m)[22m[90m 36[2mms[22m[39m
+ [33m❯[39m src/tests/SUITE_TEMPLATES.test.ts [2m ([22m[2m53 tests[22m [2m|[22m [31m2 failed[39m[2m)[22m[90m 160[2mms[22m[39m
+[31m   [33m❯[31m src/tests/SUITE_TEMPLATES.test.ts[2m > [22mindex.html accessibility[2m > [22mhas manifest link for PWA[39m
+[31m     → expected '<!doctype html>\n<html lang="en">\n  …' to contain 'rel="manifest"'[39m
+[31m   [33m❯[31m src/tests/SUITE_TEMPLATES.test.ts[2m > [22mindex.html accessibility[2m > [22mhas service worker registration[39m
+[31m     → expected '<!doctype html>\n<html lang="en">\n  …' to contain 'serviceWorker'[39m
+ [32m✓[39m src/tests/unit/services/dbService.test.ts [2m ([22m[2m7 tests[22m[2m)[22m[90m 19[2mms[22m[39m
+ [32m✓[39m src/tests/unit/services/sessionService.test.ts [2m ([22m[2m4 tests[22m[2m)[22m[90m 29[2mms[22m[39m
+ [32m✓[39m src/tests/unit/services/analyticsService.test.ts [2m ([22m[2m5 tests[22m[2m)[22m[90m 236[2mms[22m[39m
+[90mstderr[2m | src/tests/unit/services/geminiService.test.ts[2m > [22m[2mGeminiService[2m > [22m[2mstreamCodeAnalysis handles error in stream[22m[39m
+[GeminiService] Streaming Error: Error: API Error
+    at [90mE:\DevBrief AI\[39msrc\tests\unit\services\geminiService.test.ts:52:49
+    at [90mfile:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:135:14
+    at [90mfile:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:60:26
+    at runTest [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:781:17[90m)[39m
+    at runSuite [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:909:15[90m)[39m
+    at runSuite [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:909:15[90m)[39m
+    at runFiles [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:958:5[90m)[39m
+    at startTests [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:967:3[90m)[39m
+    at [90mfile:///E:/DevBrief%20AI/[39mnode_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+    at withEnv [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:83:5[90m)[39m
+
+[90mstderr[2m | src/tests/unit/services/geminiService.test.ts[2m > [22m[2mGeminiService[2m > [22m[2mstreamCodeAnalysis truncates long context[22m[39m
+[GeminiService] Context truncated from 35000 to 30000 characters.
+
+ [32m✓[39m src/tests/unit/services/geminiService.test.ts [2m ([22m[2m3 tests[22m[2m)[22m[33m 301[2mms[22m[39m
+[90mstderr[2m | src/tests/unit/services/authService.test.ts[2m > [22m[2mAuthService[2m > [22m[2msignInWithGoogle handles errors[22m[39m
+[AuthService] Google Sign-In Failed: Error: Auth failed
+    at [90mE:\DevBrief AI\[39msrc\tests\unit\services\authService.test.ts:18:52
+    at [90mfile:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:135:14
+    at [90mfile:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:60:26
+    at runTest [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:781:17[90m)[39m
+    at runSuite [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:909:15[90m)[39m
+    at runSuite [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:909:15[90m)[39m
+    at runFiles [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:958:5[90m)[39m
+    at startTests [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:967:3[90m)[39m
+    at [90mfile:///E:/DevBrief%20AI/[39mnode_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+    at withEnv [90m(file:///E:/DevBrief%20AI/[39mnode_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:83:5[90m)[39m
+
+ [32m✓[39m src/tests/unit/services/authService.test.ts [2m ([22m[2m4 tests[22m[2m)[22m[90m 298[2mms[22m[39m
+ [32m✓[39m src/tests/unit/utils.test.ts [2m ([22m[2m10 tests[22m[2m)[22m[33m 691[2mms[22m[39m
+ [32m✓[39m src/tests/unit/components/ui/StreamingText.test.tsx [2m ([22m[2m4 tests[22m[2m)[22m[33m 399[2mms[22m[39m
+ [32m✓[39m src/tests/unit/components/ui/Button.test.tsx [2m ([22m[2m5 tests[22m[2m)[22m[33m 1217[2mms[22m[39m
+ [33m❯[39m src/tests/unit/pages/AppPage.test.tsx [2m ([22m[2m7 tests[22m [2m|[22m [31m7 failed[39m[2m)[22m[90m 268[2mms[22m[39m
+[31m   [33m❯[31m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mrenders workspace layout[39m
+[31m     → Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+[31m   [33m❯[31m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mshows "New Analysis" heading by default[39m
+[31m     → Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+[31m   [33m❯[31m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mhandles new session button click[39m
+[31m     → Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+[31m   [33m❯[31m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mhandles session selection[39m
+[31m     → Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+[31m   [33m❯[31m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mhandles delete session[39m
+[31m     → Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+[31m   [33m❯[31m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22msubmits a question and calls geminiService[39m
+[31m     → Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+[31m   [33m❯[31m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mshows loading state during stream[39m
+[31m     → Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+ [32m✓[39m src/tests/unit/components/features/SessionSidebar.test.tsx [2m ([22m[2m5 tests[22m[2m)[22m[33m 1466[2mms[22m[39m
+ [32m✓[39m src/tests/unit/components/ui/Input.test.tsx [2m ([22m[2m4 tests[22m[2m)[22m[33m 1290[2mms[22m[39m
+ [32m✓[39m src/tests/unit/components/features/CodeInput.test.tsx [2m ([22m[2m4 tests[22m[2m)[22m[33m 1713[2mms[22m[39m
+ [32m✓[39m src/tests/unit/components/features/QuestionBar.test.tsx [2m ([22m[2m4 tests[22m[2m)[22m[33m 1829[2mms[22m[39m
+ [32m✓[39m src/tests/unit/pages/LandingPage.test.tsx [2m ([22m[2m4 tests[22m[2m)[22m[33m 2299[2mms[22m[39m
+ [32m✓[39m src/tests/unit/components/ui/Modal.test.tsx [2m ([22m[2m4 tests[22m[2m)[22m[33m 905[2mms[22m[39m
+ [32m✓[39m src/tests/integration/basic.test.ts [2m ([22m[2m1 test[22m[2m)[22m[90m 12[2mms[22m[39m
+ [32m✓[39m src/tests/security/basic.test.ts [2m ([22m[2m1 test[22m[2m)[22m[90m 5[2mms[22m[39m
+ [32m✓[39m src/tests/unit/basic.test.ts [2m ([22m[2m1 test[22m[2m)[22m[90m 12[2mms[22m[39m
+ [32m✓[39m src/tests/accessibility/basic.test.ts [2m ([22m[2m1 test[22m[2m)[22m[90m 7[2mms[22m[39m
+ [32m✓[39m src/tests/edge-cases/basic.test.ts [2m ([22m[2m1 test[22m[2m)[22m[90m 18[2mms[22m[39m
+ [32m✓[39m src/tests/unit/pages/HistoryPage.test.tsx [2m ([22m[2m2 tests[22m[2m)[22m[90m 33[2mms[22m[39m
+ [33m❯[39m src/tests/unit/components/ui/LoadingSpinner.test.tsx [2m ([22m[2m5 tests[22m [2m|[22m [31m2 failed[39m[2m)[22m[90m 191[2mms[22m[39m
+[31m   [33m❯[31m src/tests/unit/components/ui/LoadingSpinner.test.tsx[2m > [22mLoadingSpinner Component[2m > [22mrenders small size[39m
+[31m     → expected [] to include 'h-4'[39m
+[31m   [33m❯[31m src/tests/unit/components/ui/LoadingSpinner.test.tsx[2m > [22mLoadingSpinner Component[2m > [22mrenders large size[39m
+[31m     → expected [] to include 'h-12'[39m
+
+[31m⎯⎯⎯⎯⎯⎯[1m[7m Failed Tests 11 [27m[22m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/tests/SUITE_TEMPLATES.test.ts[2m > [22mindex.html accessibility[2m > [22mhas manifest link for PWA
+[31m[1mAssertionError[22m: expected '<!doctype html>\n<html lang="en">\n  …' to contain 'rel="manifest"'[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- rel="manifest"[39m
+[31m+ <!doctype html>[39m
+[31m+ <html lang="en">[39m
+[31m+   <head>[39m
+[31m+     <meta charset="UTF-8" />[39m
+[31m+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />[39m
+[31m+     <meta name="description" content="__APP_DESCRIPTION__" />[39m
+[31m+     <meta name="theme-color" content="#4F46E5" />[39m
+[31m+[39m
+[31m+[39m
+[31m+     <!-- Favicon — inline SVG emoji for zero-asset icon -->[39m
+[31m+     <link[39m
+[31m+       rel="icon"[39m
+[31m+       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>__APP_ICON_EMOJI__</text></svg>"[39m
+[31m+     />[39m
+[31m+[39m
+[31m+     <!-- Google Fonts — loaded via <link> not CSS @import for better performance.[39m
+[31m+          @import blocks rendering; <link> with preconnect doesn't. -->[39m
+[31m+     <link rel="preconnect" href="https://fonts.googleapis.com" />[39m
+[31m+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />[39m
+[31m+     <link[39m
+[31m+       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"[39m
+[31m+       rel="stylesheet"[39m
+[31m+     />[39m
+[31m+[39m
+[31m+     <title>__APP_NAME__</title>[39m
+[31m+   </head>[39m
+[31m+   <body>[39m
+[31m+     <!-- Skip navigation link — must be the first interactive element in the DOM.[39m
+[31m+          Hidden visually but revealed on keyboard focus via .sr-only:focus styles.[39m
+[31m+          Required for WCAG 2.1 SC 2.4.1 (Bypass Blocks). -->[39m
+[31m+     <a[39m
+[31m+       href="#main-content"[39m
+[31m+       class="sr-only"[39m
+[31m+     >[39m
+[31m+       Skip to main content[39m
+[31m+     </a>[39m
+[31m+[39m
+[31m+     <div id="root"></div>[39m
+[31m+[39m
+[31m+     <script type="module" src="/src/main.tsx"></script>[39m
+[31m+[39m
+[31m+   </body>[39m
+[31m+ </html>[39m
+[31m+[39m
+
+[36m [2m❯[22m src/tests/SUITE_TEMPLATES.test.ts:[2m231:18[22m[39m
+    [90m229| [39m
+    [90m230| [39m  [34mit[39m([32m'has manifest link for PWA'[39m[33m,[39m () [33m=>[39m {
+    [90m231| [39m    [34mexpect[39m(html)[33m.[39m[34mtoContain[39m([32m'rel="manifest"'[39m)[33m;[39m
+    [90m   | [39m                 [31m^[39m
+    [90m232| [39m  })[33m;[39m
+    [90m233| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/11]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/tests/SUITE_TEMPLATES.test.ts[2m > [22mindex.html accessibility[2m > [22mhas service worker registration
+[31m[1mAssertionError[22m: expected '<!doctype html>\n<html lang="en">\n  …' to contain 'serviceWorker'[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- serviceWorker[39m
+[31m+ <!doctype html>[39m
+[31m+ <html lang="en">[39m
+[31m+   <head>[39m
+[31m+     <meta charset="UTF-8" />[39m
+[31m+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />[39m
+[31m+     <meta name="description" content="__APP_DESCRIPTION__" />[39m
+[31m+     <meta name="theme-color" content="#4F46E5" />[39m
+[31m+[39m
+[31m+[39m
+[31m+     <!-- Favicon — inline SVG emoji for zero-asset icon -->[39m
+[31m+     <link[39m
+[31m+       rel="icon"[39m
+[31m+       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>__APP_ICON_EMOJI__</text></svg>"[39m
+[31m+     />[39m
+[31m+[39m
+[31m+     <!-- Google Fonts — loaded via <link> not CSS @import for better performance.[39m
+[31m+          @import blocks rendering; <link> with preconnect doesn't. -->[39m
+[31m+     <link rel="preconnect" href="https://fonts.googleapis.com" />[39m
+[31m+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />[39m
+[31m+     <link[39m
+[31m+       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"[39m
+[31m+       rel="stylesheet"[39m
+[31m+     />[39m
+[31m+[39m
+[31m+     <title>__APP_NAME__</title>[39m
+[31m+   </head>[39m
+[31m+   <body>[39m
+[31m+     <!-- Skip navigation link — must be the first interactive element in the DOM.[39m
+[31m+          Hidden visually but revealed on keyboard focus via .sr-only:focus styles.[39m
+[31m+          Required for WCAG 2.1 SC 2.4.1 (Bypass Blocks). -->[39m
+[31m+     <a[39m
+[31m+       href="#main-content"[39m
+[31m+       class="sr-only"[39m
+[31m+     >[39m
+[31m+       Skip to main content[39m
+[31m+     </a>[39m
+[31m+[39m
+[31m+     <div id="root"></div>[39m
+[31m+[39m
+[31m+     <script type="module" src="/src/main.tsx"></script>[39m
+[31m+[39m
+[31m+   </body>[39m
+[31m+ </html>[39m
+[31m+[39m
+
+[36m [2m❯[22m src/tests/SUITE_TEMPLATES.test.ts:[2m235:18[22m[39m
+    [90m233| [39m
+    [90m234| [39m  [34mit[39m([32m'has service worker registration'[39m[33m,[39m () [33m=>[39m {
+    [90m235| [39m    [34mexpect[39m(html)[33m.[39m[34mtoContain[39m([32m'serviceWorker'[39m)[33m;[39m
+    [90m   | [39m                 [31m^[39m
+    [90m236| [39m  })[33m;[39m
+    [90m237| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/11]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mrenders workspace layout
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mshows "New Analysis" heading by default
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mhandles new session button click
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mhandles session selection
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mhandles delete session
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22msubmits a question and calls geminiService
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/pages/AppPage.test.tsx[2m > [22mAppPage[2m > [22mshows loading state during stream
+[31m[1mError[22m: Cannot find module '@/services/authService'
+Require stack:
+- E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx[39m
+[90m [2m❯[22m TracingChannel.traceSync node:diagnostics_channel:[2m328:14[22m[39m
+[36m [2m❯[22m src/tests/unit/pages/AppPage.test.tsx:[2m78:29[22m[39m
+    [90m 76| [39m    vi[33m.[39m[34mclearAllMocks[39m()[33m;[39m
+    [90m 77| [39m    [90m// Re-set default auth mock after clearAllMocks[39m
+    [90m 78| [39m    [35mconst[39m { authService } [33m=[39m [34mrequire[39m([32m'@/services/authService'[39m)[33m;[39m
+    [90m   | [39m                            [31m^[39m
+    [90m 79| [39m    authService[33m.[39monAuthStateChange[33m.[39m[34mmockImplementation[39m((callback[33m:[39m any) [33m=[39m…
+    [90m 80| [39m      [34mcallback[39m({ uid[33m:[39m [32m'test-user'[39m[33m,[39m displayName[33m:[39m [32m'Test User'[39m })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'MODULE_NOT_FOUND', requireStack: [ 'E:\DevBrief AI\src\tests\unit\pages\AppPage.test.tsx' ] }[39m
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/11]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/components/ui/LoadingSpinner.test.tsx[2m > [22mLoadingSpinner Component[2m > [22mrenders small size
+[31m[1mAssertionError[22m: expected [] to include 'h-4'[39m
+[36m [2m❯[22m src/tests/unit/components/ui/LoadingSpinner.test.tsx:[2m21:28[22m[39m
+    [90m 19| [39m    [34mrender[39m([33m<[39m[33mLoadingSpinner[39m [33msize[39m[33m=[39m[32m"sm"[39m [33m/[39m[33m>[39m)[33m;[39m
+    [90m 20| [39m    [35mconst[39m svg [33m=[39m document[33m.[39m[34mquerySelector[39m([32m'svg'[39m)[33m;[39m
+    [90m 21| [39m    [34mexpect[39m(svg[33m?.[39mclassName)[33m.[39m[34mtoContain[39m([32m'h-4'[39m)[33m;[39m
+    [90m   | [39m                           [31m^[39m
+    [90m 22| [39m  })[33m;[39m
+    [90m 23| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/11]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/tests/unit/components/ui/LoadingSpinner.test.tsx[2m > [22mLoadingSpinner Component[2m > [22mrenders large size
+[31m[1mAssertionError[22m: expected [] to include 'h-12'[39m
+[36m [2m❯[22m src/tests/unit/components/ui/LoadingSpinner.test.tsx:[2m27:28[22m[39m
+    [90m 25| [39m    [34mrender[39m([33m<[39m[33mLoadingSpinner[39m [33msize[39m[33m=[39m[32m"lg"[39m [33m/[39m[33m>[39m)[33m;[39m
+    [90m 26| [39m    [35mconst[39m svg [33m=[39m document[33m.[39m[34mquerySelector[39m([32m'svg'[39m)[33m;[39m
+    [90m 27| [39m    [34mexpect[39m(svg[33m?.[39mclassName)[33m.[39m[34mtoContain[39m([32m'h-12'[39m)[33m;[39m
+    [90m   | [39m                           [31m^[39m
+    [90m 28| [39m  })[33m;[39m
+    [90m 29| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/11]⎯[22m[39m
+
+[2m Test Files [22m [1m[31m3 failed[39m[22m[2m | [22m[1m[32m21 passed[39m[22m[90m (24)[39m
+[2m      Tests [22m [1m[31m11 failed[39m[22m[2m | [22m[1m[32m138 passed[39m[22m[90m (149)[39m
+[2m   Start at [22m 21:14:04
+[2m   Duration [22m 21.47s[2m (transform 10.87s, setup 39.41s, collect 42.44s, tests 13.43s, environment 128.10s, prepare 24.60s)[22m
+

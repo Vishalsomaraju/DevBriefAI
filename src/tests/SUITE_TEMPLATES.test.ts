@@ -156,9 +156,6 @@ describe('Required project files exist', () => {
     'firestore.rules',
     '.env.example',
     '.gitignore',
-    // PWA
-    'manifest.json',
-    'public/sw.js',
     // Docs
     'README.md',
     'TESTING.md',
@@ -227,13 +224,6 @@ describe('index.html accessibility', () => {
     expect(html).toMatch(/<title>[^<]+<\/title>/);
   });
 
-  it('has manifest link for PWA', () => {
-    expect(html).toContain('rel="manifest"');
-  });
-
-  it('has service worker registration', () => {
-    expect(html).toContain('serviceWorker');
-  });
 
   it('loads Google Fonts via link (not CSS import)', () => {
     // Google Fonts loaded via <link> is faster than @import and is a

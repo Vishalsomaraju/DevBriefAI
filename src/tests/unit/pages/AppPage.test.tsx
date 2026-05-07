@@ -2,6 +2,9 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { AppPage } from '@/pages/AppPage';
+import { authService } from '@/services/authService';
+import { sessionService } from '@/services/sessionService';
+import { geminiService } from '@/services/geminiService';
 
 // Mock all services
 vi.mock('@/services/analyticsService', () => ({
@@ -75,8 +78,7 @@ describe('AppPage', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     // Re-set default auth mock after clearAllMocks
-    const { authService } = require('@/services/authService');
-    authService.onAuthStateChange.mockImplementation((callback: any) => {
+    vi.mocked(authService.onAuthStateChange).mockImplementation((callback: any) => {
       callback({ uid: 'test-user', displayName: 'Test User' });
       return vi.fn();
     });
@@ -100,8 +102,7 @@ describe('AppPage', () => {
   });
 
   it('handles session selection', async () => {
-    const { sessionService } = await import('@/services/sessionService');
-    (sessionService.getSessionById as any).mockResolvedValueOnce({
+    vi.mocked(sessionService.getSessionById).mockResolvedValueOnce({
       data: { id: 'sess-1', title: 'My Session', entries: [], codeContext: 'const x = 1;', userId: 'u1', createdAt: 1, updatedAt: 2 },
       error: null
     });
@@ -114,7 +115,6 @@ describe('AppPage', () => {
   });
 
   it('handles delete session', async () => {
-    const { sessionService } = await import('@/services/sessionService');
     await act(async () => { render(<AppPage />); });
     const deleteBtn = screen.getByRole('button', { name: /Delete session/i });
     await act(async () => { fireEvent.click(deleteBtn); });
@@ -122,7 +122,6 @@ describe('AppPage', () => {
   });
 
   it('submits a question and calls geminiService', async () => {
-    const { geminiService } = await import('@/services/geminiService');
     await act(async () => { render(<AppPage />); });
     
     // Set code context first
@@ -140,9 +139,7 @@ describe('AppPage', () => {
   });
 
   it('shows loading state during stream', async () => {
-    const { geminiService } = await import('@/services/geminiService');
-    // Make streaming take some time
-    (geminiService.streamCodeAnalysis as any).mockImplementation(() => new Promise(resolve => setTimeout(resolve, 100)));
+    vi.mocked(geminiService.streamCodeAnalysis).mockImplementation(() => new Promise(resolve => setTimeout(resolve, 100)));
     
     await act(async () => { render(<AppPage />); });
     

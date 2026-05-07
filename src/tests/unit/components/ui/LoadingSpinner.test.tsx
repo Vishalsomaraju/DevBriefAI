@@ -18,13 +18,13 @@ describe('LoadingSpinner Component', () => {
   it('renders small size', () => {
     render(<LoadingSpinner size="sm" />);
     const svg = document.querySelector('svg');
-    expect(svg?.className).toContain('h-4');
+    expect(svg).toHaveClass('h-4');
   });
 
   it('renders large size', () => {
     render(<LoadingSpinner size="lg" />);
     const svg = document.querySelector('svg');
-    expect(svg?.className).toContain('h-12');
+    expect(svg).toHaveClass('h-12');
   });
 
   it('has aria-busy attribute', () => {
